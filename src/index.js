@@ -8,7 +8,7 @@ function component() {
 
     // Lodash, Now has imported new script
     element.innerHTML = _.join([], ' ');
-    // element.classList.add('body');
+
 
     return element;
 }
