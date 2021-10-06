@@ -1,24 +1,27 @@
-const tasks = [{
-  index: 1,
-  description: 'Play Music',
-  completed: false,
-},
-{
-  index: 2,
-  description: 'Edit Video',
-  completed: false,
-},
-{
-  index: 3,
-  description: 'Play Game',
-  completed: false,
-},
+import * as TaskModule from './addRemove.js';
+
+const tasks = [
+    // {
+    //     index: 1,
+    //     description: 'Play Music',
+    //     completed: false,
+    // },
+    // {
+    //     index: 2,
+    //     description: 'Edit Video',
+    //     completed: false,
+    // },
+    // {
+    //     index: 3,
+    //     description: 'Play Game',
+    //     completed: false,
+    // },
 ];
 
 function task(t) {
-  const completeClass = t.completed ? 'strike' : '';
-  const completeChecked = t.completed ? 'checked' : '';
-  return `<ul class="list">
+    const completeClass = t.completed ? 'strike' : '';
+    const completeChecked = t.completed ? 'checked' : '';
+    return `<ul class="list">
         <li class="items">
         <div class="details">
         <input type="checkbox" class="checkbox" name="option" id="${t.index}" ${completeChecked} >
@@ -31,5 +34,7 @@ function task(t) {
        </ul>
        <div class="line"></div>`;
 }
+
+TaskModule.addTask(tasks);
 
 export { tasks, task };
