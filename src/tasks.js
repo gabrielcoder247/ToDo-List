@@ -5,7 +5,7 @@ const tasks = [{
 },
 {
   index: 2,
-  description: 'Edit Video',
+  description: 'write codes',
   completed: false,
 },
 {
