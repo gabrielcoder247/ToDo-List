@@ -35,6 +35,6 @@ function task(t) {
        <div class="line"></div>`;
 }
 
-TaskModule.addTask(tasks);
+// TaskModule.addTask();
 
 export { tasks, task };

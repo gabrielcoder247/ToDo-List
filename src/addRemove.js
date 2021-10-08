@@ -33,18 +33,19 @@ export const removeCompletedTask = (arr) => {
     });
 };
 
-export const addTask = (arr) => {
+export const addTask = () => {
     const inputBox = document.querySelector('#input-box');
     const form = document.querySelector('.btn');
     form.addEventListener('click', () => {
         const taskValue = inputBox.value;
+        constindex
         const item = {
             description: taskValue,
             completed: false,
-            index: arr.length + 1,
+            index: index,
         };
         arr.push(item);
-        localStorage.setItem('taskList', JSON.stringify(new TaskList(arr)));
+        localStorage.setItem('taskList', JSON.stringify(new TaskList()));
         inputBox.value = '';
         e.preventDefault();
         window.location.reload();
