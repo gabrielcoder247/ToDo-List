@@ -4,7 +4,7 @@ export class TaskList {
     }
 }
 
-const saveAndReload = (arr) => {
+export const saveAndReload = (arr) => {
     localStorage.setItem('tasks', JSON.stringify(new TaskList(arr)));
     window.location.reload();
 };
@@ -30,5 +30,24 @@ export const removeCompletedTask = (arr) => {
         const arr0 = arr.filter((item) => item.completed === false);
         arr0.forEach((item, i) => { item.index = i + 1; });
         saveAndReload(arr0);
+    });
+};
+
+
+export const addNewTask = (arr) => {
+    const inputBox = document.querySelector('#input-box');
+    const form = document.querySelector('form');
+    form.addEventListener('submit', (e) => {
+        const taskValue = inputBox.value;
+        const item = {
+            description: taskValue,
+            completed: false,
+            index: arr.length + 1,
+        };
+        arr.push(item);
+        localStorage.setItem('tasks', JSON.stringify(new TaskList(arr)));
+        inputBox.value = '';
+        e.preventDefault();
+        window.location.reload();
     });
 };
