@@ -1,6 +1,5 @@
 import { saveAndReload } from './tasks.js';
 
-// eslint-disable-next-line no-use-before-define
 const editTask = (arr) => {
   const editImg = document.querySelectorAll('.dot-menu img');
   editImg.forEach((item) => {

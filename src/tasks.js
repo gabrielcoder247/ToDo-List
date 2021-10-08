@@ -38,7 +38,6 @@ export const addNewTask = (arr) => {
   const form = document.querySelector('form');
   form.addEventListener('submit', (e) => {
     const taskValue = inputBox.value;
-    // eslint-disable-next-line no-use-before-define
     const item = {
       description: taskValue,
       completed: false,
