@@ -8,7 +8,9 @@
 
 Additional description about the project and its features.
 
-[live link](https://gabrielcoder247.github.io/todo-list/dist/)
+## See the project live 
+
+### [click here...](https://gabrielcoder247.github.io/todo-list/dist/) to view this project
 
 ## Built With
 
