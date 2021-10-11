@@ -1,34 +1,47 @@
+import * as TaskModule from './tasks.js';
+import editTask from './edit.js';
+
 import './style.css';
 
-const data = [{
-        index: 1,
-        description: 'Attend a meeting',
-        completed: true,
-    }, {
-        index: 4,
-        description: 'Go shopping in the supermarket',
-        completed: true,
-    }, {
-        index: 2,
-        description: 'Go to the gym',
-        completed: false,
-    }, {
-        index: 3,
-        description: 'Go to the club and have some drinks',
-        completed: true,
-    },
+let tasks = [];
+const localdata = JSON.parse(localStorage.getItem('tasks'));
+if (localdata !== null) {
+  tasks = localdata.tasks;
+}
 
-];
-let toDoItem = '';
-const itemList = document.querySelector('#list-container');
+const htmldiv = document.querySelector('.itemhtml');
 
-data.forEach((item, index) => {
-    toDoItem += `
-    <li class="items" id="${index}">
-    <input type="checkbox" id="check-b" name="checkbox" value="">
-    <p id="item-list">${item.description}</p> <a href="#"><i id="fa-ellipsis-v" class="fas fa-ellipsis-v"></i></a>
-    </li>
-    <div class="line"></div>
-    `;
+let itemHtml = '';
+const taskreverse = [...tasks].reverse();
+taskreverse.forEach((item) => {
+  if (item.completed) {
+    itemHtml
+            += `<div class="item-container checked">
+       <div class="form-item">
+       <input type="checkbox" id="${item.index}" name="todo" value="something" checked>
+       <label for="${item.index}">${item.description}</label>
+       </div>
+       </div>`;
+  } else {
+    itemHtml
+            += `<div class="item-container unchecked">
+       <div class="form-item">
+       <div class="visiable-input">
+       <input type="checkbox" id="${item.index}" name="todo" value="something">
+       <label for="${item.index}">${item.description}</label>
+       </div>
+       <input class="hidden-edit-input" type="text" name="todo" value="${item.description}" autofocus>
+       </div>
+       <div class="dot-menu">
+       <img src="https://img.icons8.com/windows/32/000000/menu-2.png"/>
+       </div>
+       </div>`;
+  }
 });
-itemList.innerHTML = toDoItem;
+
+htmldiv.innerHTML = itemHtml;
+
+TaskModule.changeStatus(tasks);
+TaskModule.removeCompletedTask(tasks);
+TaskModule.addNewTask(tasks);
+editTask(tasks);
