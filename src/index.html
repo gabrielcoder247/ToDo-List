@@ -3,11 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/c397284221.js" crossorigin="anonymous"></script>
-    <script src="index.js" defer></script>
-    <title>To-do-list</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
 </head>
 
 <body>
@@ -31,11 +29,35 @@
             <div class="btn-container">
                 clear All Completed
 
+    <main class="container">
+        <header id="list-head">
+            <div class="header-container">
+                <div id="headline">
+                    <h1>Today's To Do</h1>
+                </div>
+                <div id="sync">
+                    <a class="a-spinner" href="#"><i class="fas fa-sync-alt"></i></a>
+
+                </div>
             </div>
-        </a>
-
-
-    </div>
+        </header>
+        <section id="list-body">
+            <form action="index.html" method="post">
+                <input type="text" id="input-box" name="new-item" value="" placeholder="Add to your list" autofocus>
+            </form>
+            <form action="index.html" method="post">
+                <div class="itemhtml">
+                </div>
+            </form>
+        </section>
+        <section id="list-foot">
+            <div class="clear">
+                <a id="clear-btn" href="#">
+                    <p>Clear all completed</p>
+                </a>
+            </div>
+        </section>
+    </main>
 
 </body>
 
