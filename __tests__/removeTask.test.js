@@ -22,7 +22,7 @@ describe('Remove tasks', () => {
     expect(removeCompletedTask(arr)).toHaveLength(1);
   });
   test('should be updated after deleting the tasks', () => {
-    expect(localStorageMock.getItem('data')[0].description).toBe('something to do 2');
+    expect(localStorageMock.getItem('data')[0].description).toBe('Do my laundry');
   });
   test('should be updated after deleting the tasks', () => {
     expect(localStorageMock.getItem('data')[0].completed).toBe(false);
