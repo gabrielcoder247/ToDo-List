@@ -3,17 +3,17 @@ import removeCompletedTask from '../__mocks__/removeTask.js';
 
 describe('Remove tasks', () => {
   const arr = [{
-    description: 'something to do 1',
+    description: 'watch a series',
     completed: true,
     index: 1,
   },
   {
-    description: 'something to do 2',
+    description: 'Do my laundry',
     completed: false,
     index: 2,
   },
   {
-    description: 'something to do 3',
+    description: 'Prepare my dinner',
     completed: true,
     index: 3,
   },
@@ -22,7 +22,7 @@ describe('Remove tasks', () => {
     expect(removeCompletedTask(arr)).toHaveLength(1);
   });
   test('should be updated after deleting the tasks', () => {
-    expect(localStorageMock.getItem('data')[0].description).toBe('something to do 2');
+    expect(localStorageMock.getItem('data')[0].description).toBe('Do my laundry');
   });
   test('should be updated after deleting the tasks', () => {
     expect(localStorageMock.getItem('data')[0].completed).toBe(false);
