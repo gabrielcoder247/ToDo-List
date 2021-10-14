@@ -1,4 +1,4 @@
-import { saveAndReload } from './tasks.js';
+import saveAndReload from './tasks.js';
 
 const editTask = (arr) => {
   const editImg = document.querySelectorAll('.dot-menu img');
