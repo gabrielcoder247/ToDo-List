@@ -3,6 +3,8 @@ import editTask from './edit.js';
 
 import './style.css';
 
+// Task.displayTasks();
+
 let tasks = [];
 const localdata = JSON.parse(localStorage.getItem('tasks'));
 if (localdata !== null) {
