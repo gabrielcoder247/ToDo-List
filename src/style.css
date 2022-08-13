@@ -55,22 +55,13 @@ h1 {
 }
 
 .checked {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 8px;
-  font-size: 20px;
   padding-bottom: 12px;
   padding-left: 7px;
   border-top: #dfd9d9 solid 1px;
   height: 80px;
 }
 
-.checked label {
-  text-decoration: line-through;
-}
-
+.checked,
 .unchecked {
   display: flex;
   flex-direction: row;
@@ -78,6 +69,13 @@ h1 {
   align-items: center;
   padding-top: 8px;
   font-size: 20px;
+}
+
+.checked label {
+  text-decoration: line-through;
+}
+
+.unchecked {
   padding-bottom: 8px;
   padding-left: 7px;
   border-top: #dfd9d9 solid 1px;
