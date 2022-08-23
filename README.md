@@ -2,13 +2,13 @@
 
 # TODO LIST APPS
 
-`A bare structure of to-do list application. this is the first milestone for this app`
+`A bare structure of to-do list application. this is the first milestone for this application`
 
 ![screenshot](tod-do-list.png)
 
 Additional description about the project and its features.
 
-## See the project live 
+## See the project live
 
 ### [click here...](https://gabrielcoder247.github.io/todo-list/dist/) to view this project
 

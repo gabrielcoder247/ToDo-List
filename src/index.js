@@ -8,7 +8,7 @@ import './style.css';
 let tasks = [];
 const localdata = JSON.parse(localStorage.getItem('tasks'));
 if (localdata !== null) {
-  tasks = localdata.tasks;
+    tasks = localdata.tasks;
 }
 
 const htmldiv = document.querySelector('.itemhtml');
@@ -16,16 +16,16 @@ const htmldiv = document.querySelector('.itemhtml');
 let itemHtml = '';
 const taskreverse = [...tasks].reverse();
 taskreverse.forEach((item) => {
-  if (item.completed) {
-    itemHtml
+    if (item.completed) {
+        itemHtml
             += `<div class="item-container checked">
        <div class="form-item">
        <input type="checkbox" id="${item.index}" name="todo" value="something" checked>
        <label for="${item.index}">${item.description}</label>
        </div>
        </div>`;
-  } else {
-    itemHtml
+    } else {
+        itemHtml
             += `<div class="item-container unchecked">
        <div class="form-item">
        <div class="visiable-input">
@@ -38,7 +38,7 @@ taskreverse.forEach((item) => {
        <img src="https://img.icons8.com/windows/32/000000/menu-2.png"/>
        </div>
        </div>`;
-  }
+    }
 });
 
 htmldiv.innerHTML = itemHtml;
